@@ -6,6 +6,7 @@ let img;
 let imgShana;
 let imgKarim;
 let imgNyria;
+let imgLaurine;
 // Liste
 // P5JS preload
 function preload() {
@@ -13,6 +14,7 @@ function preload() {
     imgShana = loadImage("assets/shana.jpg");
     imgKarim = loadImage("assets/Montreal_Canadiens.png");
     imgNyria = loadImage("assets/nyria.png");
+    imgLaurine = loadImage("assets/garden-flowers.png");
 }
 // user input
 function mousePressed() {
@@ -51,23 +53,12 @@ function mousePressed() {
     if(randomFunction == 5) {
         shana(a, b, imgKarim);
     }
-
-    // jonathan(a, b);
-    // marc(c, d);
-    // console.log(a, b);
-    // let randomFunction = floor(random(0, allFunctions.length));
-    // let choosenFunction = allFunctions[randomFunction];
-    // choosenFunction(a, b);
-    // let a = getRandomPoint();
-    // let b = a.copy();
-    // b.x+=columnWidth;
-    // b.y+=rowHeight;
-    // marc(a, b);
 }
 // P5JS setup
 function setup() {
     createCanvas(windowWidth, windowHeight, P2D);
     pixelDensity(1);
+    // smooth();
     //
     columnWidth = round(width/gridQttX);
     rowHeight = round(height/gridQttY);
