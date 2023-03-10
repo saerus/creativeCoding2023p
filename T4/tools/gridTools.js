@@ -29,6 +29,11 @@ function getPointAround(x, y, dst = 1) {
     let qttY = floor(random(1, dst+1))*rowHeight;
     return createVector(x+qttX*dirX, y+qttY*dirY);
 }
+function getPointInSimlarDirection(x, y, starterAngle) {
+    let randomAngle = random(-PI/8, PI/8);
+    let finalAngle = starterAngle+randomAngle;
+    return createVector(x+cos(finalAngle)*100, y+sin(finalAngle)*100);
+}
 function gridifyX(n) {
     return round(n/columnWidth)*columnWidth;
 }

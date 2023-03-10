@@ -1,3 +1,4 @@
+
 // P5JS preload
 function preload() {
 }
@@ -7,7 +8,7 @@ function mousePressed() {
     let y = gridifyY(mouseY);
     let a = createVector(x, y);
     let b = getPointAround(x, y, 3);
-    drawArrowFromTo(a, b);
+    drawArrowFromTo(a, b, 5);
 }
 // P5JS setup
 function setup() {
