@@ -5,6 +5,20 @@ function preload() {
 }
 // user input
 function mousePressed() {
+    //
+    for(let y = 0; y < gridQttY; y++) {
+        //boucle pour chaque column
+            for(let x = 0; x < gridQttX; x++) {
+             //boucle pour chaque row
+            let posX = x * columnWidth; //calcul de la position x (augmente de columnwidth a chaque iteration)
+            let posY = y * rowHeight; //calcul de la position y (augmente de rowHeight a chaque iteration)
+            let topLeft = createVector(posX, posY);
+            let bottomRight = createVector(posX+columnWidth, posY+rowHeight);
+            //
+            drawDisplacedImage(topLeft, bottomRight);
+        }
+    }
+    //drawDisplacedImage();
 }
 // P5JS setup
 function setup() {
@@ -18,6 +32,7 @@ function setup() {
 }
 // P5JS draw
 function draw() {
+    //image(ocrImg, 0, 0, width, height);
 }
 // P5JS windowResized
 function windowResized() {

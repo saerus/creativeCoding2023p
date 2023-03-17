@@ -4,8 +4,8 @@ let columnWidth;
 let rowHeight;
 //
 function calculateGrid() {
-    columnWidth = round(width/gridQttX);
-    rowHeight = round(height/gridQttY);
+    columnWidth = (width/gridQttX);
+    rowHeight = (height/gridQttY);
 }
 //
 function getRandomPoint() {
