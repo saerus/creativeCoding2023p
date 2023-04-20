@@ -9,11 +9,13 @@ function drawDebugLineFromTo(a, b) {
 function drawDisplacedImage(topLeft, bottomRight) {
     // rect(topLeft.x, topLeft.y, bottomRight.x, bottomRight.y);
     // ellipse(topLeft.x, bottomRight.y, 10, 10);
+    // let brightness = 
     let rW = random(0, 0);
     let rH = random(0, 0);
     let noiseX = noise(topLeft.x);
-    let rX = map(noiseX, 0, 1, -50, 50);
-    let rY = random(-0, 0);
+    let rX = map(noiseX, 0, 1, -100, 100);
+    let noiseY = noise(topLeft.y);
+    let rY = map(noiseY, 0, 1, -100, 100);
     //
     let srcX = map(topLeft.x, 0, width, 0, ocrImg.width);
     //let srcX = topLeft.x/width*ocrImg.width; // règle de trois

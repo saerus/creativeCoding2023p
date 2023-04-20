@@ -1,5 +1,5 @@
-let gridQttX = 50;
-let gridQttY = 50;
+let gridQttX = 60;
+let gridQttY = 30;
 let columnWidth;
 let rowHeight;
 //

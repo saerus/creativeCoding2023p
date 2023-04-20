@@ -26,7 +26,7 @@ function mousePressed() {
     let d = b.copy();
     //
     let randomFunction = floor(random(0, 6));
-    // randomFunction = 2;
+    // randomFunction = 6;
     if(randomFunction == 0) {
         shana(a, b, imgNyria);
     }
@@ -52,6 +52,9 @@ function mousePressed() {
     }
     if(randomFunction == 5) {
         shana(a, b, imgKarim);
+    }
+    if(randomFunction == 6) {
+        repeator(a, b);
     }
 }
 // P5JS setup
