@@ -6,14 +6,17 @@ function preload() {
 }
 // user input
 function mousePressed() {
-    // let pos = createVector(mouseX, mouseY);
-    // dot1 = new MovingDotC(pos);
-    // dot2 = new MovingDotC(pos);
-    //
-    // setTimeout(()=>{
-    //     dot2.changeColor();
-    // }, 5000);
-    let qtt = 200;
+    // -------------------------------- FUNCTION VERSION
+    // let qtt = 10;
+    // for(let i=0; i<qtt; i++) {
+    //     let angle = TAU/qtt*i;
+    //     let x = cos(angle)*100;
+    //     let y = sin(angle)*100;
+    //     let pos = createVector(mouseX+x, mouseY+y);
+    //     movingDot(pos, 0, color(0, 255, ));
+    // }
+    // -------------------------------- CLASS VERSION
+    let qtt = 10;
     for(let i=0; i<qtt; i++) {
         let angle = TAU/qtt*i;
         let x = cos(angle)*100;
@@ -37,14 +40,6 @@ function setup() {
 }
 // P5JS draw
 function draw() {
-    // if(dot1) {
-    //     dot1.update();
-    //     dot1.draw();
-    // }
-    // if(dot2) {
-    //     dot1.update();
-    //     dot2.draw();
-    // }
     for(let i=dotsObjects.length-1; i>=0; i--) {
         if(dotsObjects[i].size<=0) {
             dotsObjects.splice(i, 1);
