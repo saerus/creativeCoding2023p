@@ -45,10 +45,10 @@ function drawDisplacedImage(a, b) {
     let imgW = imgB.x-imgA.x;
     let imgH = imgB.y-imgA.y;
     //
-    // imgA.x += random(-10, 10);
-    // imgA.y += random(-10, 10);
-    // imgA.x += noise(a.x, a.y)*100-50;
-    // imgA.y += noise(a.y)*100-50;
+    imgA.x += random(-10, 10);
+    imgA.y += random(-10, 10);
+    imgA.x += noise(a.x, a.y)*100-50;
+    imgA.y += noise(a.y)*100-50;
     //
     copy(ocrImg, imgA.x, imgA.y, imgW, imgH, a.x, a.y, w, h);
     // debug
