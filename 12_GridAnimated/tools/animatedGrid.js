@@ -37,6 +37,11 @@ class AnimatedLine {
         this.y2 = y2;
         this.time = 0;
         this.speed = random(0.0001, 0.1);
+        //
+        this.vx1 = random(-0.01, 0.01);
+        this.vy1 = random(-0.01, 0.01);
+        this.vx2 = random(-0.01, 0.01);
+        this.vy2 = random(-0.01, 0.01);
     }
     draw() {
         //
@@ -44,6 +49,10 @@ class AnimatedLine {
         if (this.time > 1) {
             this.time = 1;
         }
+        this.x1+=this.vx1;
+        this.y1+=this.vy1;
+        this.x2+=this.vx2;
+        this.y2+=this.vy2;
         //
         let fx2 = lerp(this.x1, this.x2, this.time);
         let fy2 = lerp(this.y1, this.y2, this.time);
